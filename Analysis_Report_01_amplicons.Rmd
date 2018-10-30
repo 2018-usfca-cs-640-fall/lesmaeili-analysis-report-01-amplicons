@@ -272,18 +272,18 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
 plot_richness(phyloseq_obj,
               x = "sample_type",
               measures = c("Shannon", "Simpson"),
-              color = "Sex") +
+              color = "age") +
   xlab("Sample origin") +
   geom_jitter(width = 0.2) +
   theme_bw()
 ```
 
-**Figure 1**: Alpha diversity measures of the two sample types, colored by gender.
+**Figure 1**: Alpha diversity measures of the two sample types, colored by age
 
 ```{r example-phyloseq-plot-2}
 # phylogeny, yay!
 plot_tree(phyloseq_obj,
-          color = "Sex",
+          color = "age",
           ladderize = TRUE) # this arranges the tree branches from short to long
 ```
 
