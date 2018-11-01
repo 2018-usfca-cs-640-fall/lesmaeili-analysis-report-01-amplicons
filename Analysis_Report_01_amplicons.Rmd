@@ -289,6 +289,28 @@ plot_tree(phyloseq_obj,
 
 **Figure 2**: Inferred phylogeny of sequences, with points on tips representing samples within which each particular taxa occurred. Tree represents phylogeny inferred using FastTree.
 
+```{r sample-source-abundance}
+# bar plot of sample source (keyboard key or finger) and Abundance of sequences
+plot_bar(phyloseq_obj, x = "age")
+```
+
+**Figure 3** Abundance of bacteria across age groups. The largest number of 
+sequences were seen in age group 25 years old.  
+
+```{r subset-fingers-look-at-taxa}
+# subset out only the fingertip samples
+finger_phyloseq_obj <- subset_samples(phyloseq_obj,
+                                      age= "25")
+
+# bar plot of finger samples and Abundance of sequences in different
+# Classes, colored by Order
+plot_bar(finger_phyloseq_obj,
+         x = "Class",
+         fill = "Order")
+```
+** Figure 4** Diversity of phyla in age group 25 years old, colored by class.  
+Actinobacteria is the biggest class and phylum.
+```
 
 # Discussion
 
