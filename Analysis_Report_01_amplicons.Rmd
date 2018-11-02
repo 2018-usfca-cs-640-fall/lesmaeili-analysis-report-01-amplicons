@@ -294,28 +294,48 @@ plot_tree(phyloseq_obj,
 plot_bar(phyloseq_obj, x = "age")
 ```
 
-**Figure 3** Abundance of bacteria across age groups. The largest number of 
+**Figure 1** Abundance of bacteria across age groups. The largest number of 
 sequences were seen in age group 25 years old.  
 
 ```{r subset-fingers-look-at-taxa}
 # subset out only the fingertip samples
 finger_phyloseq_obj <- subset_samples(phyloseq_obj,
-                                      age= "25")
-
+                                      age = "25")
 # bar plot of finger samples and Abundance of sequences in different
 # Classes, colored by Order
 plot_bar(finger_phyloseq_obj,
          x = "Class",
          fill = "Order")
 ```
-** Figure 4** Diversity of phyla in age group 25 years old, colored by class.  
+** Figure 2** Diversity of phyla in age group 25 years old, colored by class.  
 Actinobacteria is the biggest class and phylum.
+```
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="33")
+plot_bar(age_phyloseq_obj, x = "Class")
+```
+**Figure3** Diversity of phyla in age group 33
+```
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="36")
+plot_bar(age_phyloseq_obj, x = "Class")
+```
+**Figure4** Diversity of phyla in age group 36
+```
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="25")
+qplot(x=age, y=Sex,geom="point")
+```
+
+```{r age_sex table}
+kable(path,
+      col.names = c("age",
+                    "Sex")
 ```
 
 # Discussion
 
-Add around 2-3 pages interpreting your results and considering future directions one might take in analyzing these data.
+Add around 2-3 pages interpreting your results and considering future directions
+one might take in analyzing these data.
 
 # Sources Cited
+lintr::lint(filename = "Analysis_Report_01_amplicons.Rmd")
 
 
