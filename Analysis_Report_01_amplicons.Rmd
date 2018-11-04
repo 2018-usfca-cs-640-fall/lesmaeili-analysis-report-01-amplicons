@@ -1,7 +1,8 @@
 ---
-title: "Analysis Report 1: Your Title Here"
-author: "Don Francisco"
-date: "November 11, 2018"
+title: "Analysis Report 1:  Analysis of Human Skin Micorbiome in Different Age
+Groups"
+author: "Leila Esmaeili"
+date: "November 5, 2018"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
@@ -15,15 +16,23 @@ Add about 1.5-2 pages here. Must cite at least 5 peer reviewed articles.
 
 ## Sample origin and sequencing
 
-Add about half a page here. In this section instead of first person (I/we), use Fierer et al., since you'll just be describing what they did, based on the methods in their paper.
+Add about half a page here. In this section instead of first person (I/we), use
+Fierer et al., since you'll just be describing what they did, based on the 
+methods in their paper.
 
 ## Computational
 
-These are the methods you used. Should probably be at least a half of a page. At a very minimum should include citations for DADA2 [@callahan2016] and phyloseq [@mcmurdie2013]. Note that these don't count towards the five references you need to cite in the introduction.
+These are the methods you used. Should probably be at least a half of a page.
+At a very minimum should include citations for DADA2 [@callahan2016] and
+phyloseq [@mcmurdie2013]. Note that these don't count towards the five
+references you need to cite in the introduction.
 
 # Results
 
-In addition to a minimum of 3-4 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion.
+In addition to a minimum of 3-4 figures/tables (and associated captions), 
+you should include sufficient text in this section to describe what your
+findings were. Remember that in the results section you just describe what you
+found, but you don't interpret it - that happens in the discussion.
 
 ```{r load-libraries, message = FALSE}
 # Be sure to install these packages before running this script
@@ -78,11 +87,11 @@ sample_names <- sapply(strsplit(filenames_forward_reads, "\\."), `[`, 1)
 # Specify the full path to each of the filenames_forward_reads
 filenames_forward_reads <- file.path(path, filenames_forward_reads)
 ```
-
 ```{r check-quality-plots}
 # Plots the quality profiles of all twenty samples
 plotQualityProfile(filenames_forward_reads[1:20])
 ```
+
 
 We can see from the quality profiles that most reads tend to get pretty bad in quality after around 200 bases. 
 
@@ -267,67 +276,64 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
                          phy_tree(tree_in)) # phylogeny from sequence variants
 ```
 
-```{r example-phyloseq-plot-1}
-# alpha diversity metrics
-plot_richness(phyloseq_obj,
-              x = "sample_type",
-              measures = c("Shannon", "Simpson"),
-              color = "age") +
-  xlab("Sample origin") +
-  geom_jitter(width = 0.2) +
-  theme_bw()
+
+
+
+# make a table to count the number of samples in the intersection of
+# two categorical columns
+table(metadata_in$age,
+      metadata_in$Sex)
+
 ```
+** Table 1** This table counts the number of samples in the intersection of 
+uniqe age groups and and sex.  The table indicates that there are 3 sepecific 
+age groups 25, 33, and 36 year old with the gender being male.
 
-**Figure 1**: Alpha diversity measures of the two sample types, colored by age
-
-```{r example-phyloseq-plot-2}
-# phylogeny, yay!
-plot_tree(phyloseq_obj,
-          color = "age",
-          ladderize = TRUE) # this arranges the tree branches from short to long
-```
-
-**Figure 2**: Inferred phylogeny of sequences, with points on tips representing samples within which each particular taxa occurred. Tree represents phylogeny inferred using FastTree.
-
-```{r sample-source-abundance}
-# bar plot of sample source (keyboard key or finger) and Abundance of sequences
+```{r abundance-across-age-groups}
+# bar plot of age group and Abundance of sequences
 plot_bar(phyloseq_obj, x = "age")
 ```
 
-**Figure 1** Abundance of bacteria across age groups. The largest number of 
-sequences were seen in age group 25 years old.  
+**Figure 1** This graph is a histogram that shows Abundance of seqences across 
+age groups. The largest number of  sequences was seen in age group 25 years old.  
 
-```{r subset-fingers-look-at-taxa}
+```{r histogram-shows-diversity-all-age-groups-combined}
 # subset out only the fingertip samples
-finger_phyloseq_obj <- subset_samples(phyloseq_obj,
-                                      age = "25")
+age_phyloseq_obj <- subset_samples(phyloseq_obj)
+                           
 # bar plot of finger samples and Abundance of sequences in different
 # Classes, colored by Order
-plot_bar(finger_phyloseq_obj,
+plot_bar(age_phyloseq_obj,
          x = "Class",
          fill = "Order")
 ```
-** Figure 2** Diversity of phyla in age group 25 years old, colored by class.  
-Actinobacteria is the biggest class and phylum.
-```
-age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="33")
+** Figure 2** Diversity of phyla on fingertips colored by class.  
+This histogram shows that actinobacteria is the largest class and phylum present
+on fingertips.
+```{r histogram-diversity-age-25}
+# Abundance of  sequenecs in age group 25
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "25")
 plot_bar(age_phyloseq_obj, x = "Class")
-```
-**Figure3** Diversity of phyla in age group 33
-```
-age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="36")
-plot_bar(age_phyloseq_obj, x = "Class")
-```
-**Figure4** Diversity of phyla in age group 36
-```
-age_phyloseq_obj <- subset_samples(phyloseq_obj, age =="25")
-qplot(x=age, y=Sex,geom="point")
 ```
 
-```{r age_sex table}
-kable(path,
-      col.names = c("age",
-                    "Sex")
+** Figure 3** This graph is a histogram that descibes diversity of phyla in age 
+group 25 years old. Acientobactor is the largest class followed by bacilli.
+```{r histogram-diversity-age33}
+# Histogram abundace age 33
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "33")
+plot_bar(age_phyloseq_obj, x = "Class")
+```
+
+** Figure 4** 
+This graph is a histogram that describes the abundance of sequences
+found in age group 33 years old with  the majority being Actinobacteria 
+following baccilli, Chlororplast, Garmmaproteobactera.
+
+
+```{r histogram-diversity-age-36}
+# Histogram abundance age 36
+age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "36")
+plot_bar(age_phyloseq_obj, x = "Class")
 ```
 
 # Discussion
