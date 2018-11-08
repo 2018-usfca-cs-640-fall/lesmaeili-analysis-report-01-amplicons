@@ -337,6 +337,7 @@ age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "36")
 plot_bar(age_phyloseq_obj, x = "Class")
 ```
 
+
 ** Figure 5** This graph is a histogram that describes the abundance of 
 sequences found in age group 36 years old with  the majority being 
 Actinobacteria, bacilli and clostridia.
