@@ -10,12 +10,13 @@ csl: bioinformatics.csl
 # Introduction
 
 Add about 1.5-2 pages here. Must cite at least 5 peer reviewed articles.
-
 # Methods
 
 ## Sample origin and sequencing
 
-Add about half a page here. In this section instead of first person (I/we), use Fierer et al., since you'll just be describing what they did, based on the  methods in their paper.
+Add about half a page here. In this section instead of first person (I/we), use
+Fierer et al., since you'll just be describing what they did, based on the 
+methods in their paper.
 
 ## Computational
 
@@ -335,7 +336,7 @@ following baccilli, Chlororplast, Garmmaproteobactera.
 age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "36")
 plot_bar(age_phyloseq_obj, x = "Class")
 ```
-
+** Figure 5** This graph is a histogram that describes the abundance of sequences found in age group 36 years old with  the majority being Actinobacteria, bacilli and clostridia.
 # Discussion
 
 Add around 2-3 pages interpreting your results and considering future directions
