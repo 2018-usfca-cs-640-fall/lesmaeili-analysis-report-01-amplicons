@@ -1,7 +1,7 @@
 ---
 title: "Analysis Report 1: Analysis of Human Skin Micorbiome in Different Age Groups"
 author: "Leila Esmaeili"
-date: "November 5, 2018"
+date: "November 11, 2018"
 output: github_document
 bibliography: references.bib
 csl: bioinformatics.csl
@@ -9,29 +9,49 @@ csl: bioinformatics.csl
 
 # Introduction
 
-Add about 1.5-2 pages here. Must cite at least 5 peer reviewed articles.
+The main purpose of this report is to explore how the data collected by Frier et al can be used to investigate the relation between the skin microbiome and aging. It is important to understand the relationship between aging and human skin microbiome because this understanding can lay the foundation for creation of novel therapeutics that could slow down aging.
+
+
+Several studies have been done in C. elegans., a model organism, to find out relationships between the microbiome and aging. For instance, it has been shown that  E. coli  that co-exist with the worms secrete diffusible molecules, including metabolites and small RNAs that can impact C. elegans aging. [@heintz2014you]  Another study has revealed how drug action on host-microbiome interactions can impact longevity in C. elegans   Metformin ( a drug widely prescribed to treat Diabetes)  extends lifespan in C. elegans  by inhibiting l folate and methionine metabolism in E. coli. This, in turn, leads to altered methionine metabolism in the worm, and increased lifespan[@cabreiro2013metformin]. 
+
+
+In addition, several studies done in humans reveal interesting information about how different age groups host different kind of Microbiome.  For example, it has been shown in that human skin microbiome shifts significantly in puberty specially[@oh2012shifts].   Another study  demonstrates changes in microbiome diversity related to age[@ying2015influence].  In addition, a study has shown a certain bacterium added to the skin can help keep the skin younger [@dimarzio2008increase])
+
+
+It is worthwhile to note here the recent  advances in mirobiome research has been in part made possible through novel DNA sequencing methodology.  Using these methods, scientists are  are able to characterize and analyze microbiomes with greater  accuracy compared to culture-based approaches.  A common approach used to identify bacterial populations is based on sequencing of the small subunit bacterial 16S ribosomal RNA (rRNA) gene.   16S ribosomal RNA (rRNA) gene is present in all bacteria and archaea but not in eukaryotes. The 16S rRNA gene has variable regions, used for taxonomic classification, and conserved regions, as binding sites for PCR primers. Importantly, an organism does not need to be cultured to determine its type by 16S rRNA sequencing.  Hypervariable regions within this gene contain species-specific sequences, that when compared to reference databases, allow identification of the bacteria of origin.[@lane1985rapid],[@dethlefsen2008pervasive].
+ 
 # Methods
 
+
 ## Sample origin and sequencing
+Frier et al have used the following method to collect their data.   First,  they swabbed  individual keys of three personal computer keyboards and the skin on the front surface of the distal joint of each fingertip of the owner of each keyboard.  They also  swabbed space bar keys from 15 other private and public computer keyboards located on the University of Colorado campus. The  keyboards were swabbed 1–2 h after having last been touched. 
+Skin surfaces and keyboard keys were sampled using autoclaved cotton-tipped swabs premoistened with a sterile solution All swabs were stored at −80 °C for less than 1 week before DNA extraction. 
 
-Add about half a page here. In this section instead of first person (I/we), use
-Fierer et al., since you'll just be describing what they did, based on the 
-methods in their paper.
+Second, Genomic DNA was extracted from the swabs using the MO BIO Power Soil DNA Isolation kit. The cotton tips of frozen swabs were broken off directly into bead tubes to which 60 μL of Solution C1 had been added. Tubes were incubated at 65 °C for 10 min and then shaken horizontally at maximum speed for 2 min using the MO BIO vortex adapter. The remaining steps were performed as directed by the manufacturer.  Bacterial DNA was extracted from the swabs, and bacterial community composition was determined using the barcoded pyrosequencing procedure.
+ 
+Third, For each sample, 16S rRNA genes were amplified using  the primer set that had been optimized for the phylogenetic analysis of pyrosequencing reads . PCR reactions were carried out in triplicate 25-μL reactions with 0.6 μM forward and reverse primers, 3 μL template DNA, and 1× of HotMasterMix (5 PRIME). TReplicate amplicons were pooled and visualized on 0.1% agarose gels using SYBR Safe DNA gel stain in 0.5× TBE (Invitrogen). Amplicons were cleaned using the UltraClean-htp 96-well PCR Clean-up kit (MO BIO). Amplicon DNA concentrations were measured using the Quant-iT PicoGreen dsDNA reagent and kit (Invitrogen). Following quantitation, cleaned amplicons were combined in equimolar ratios into a single tube. 
 
-## Computational
+The final pool of DNA was separated on ice for 45 min after the addition of 5 M NaCl (0.2 M final concentration) and 2 volumes of ice-cold 100% ethanol. The precipitated DNA was centrifuged at 7,800 × g for 40 min at 4 °C, and the resulting pellet was washed with an equal volume of ice-cold 70% ethanol and centrifuged again at7,800×g for20minat4°C. The super natant was removed and the pellet was air dried for 10 min at room temperature and then resuspended in nuclease- free water (MO BIO). Pyrosequencing was carried out on a 454 Life Science [@fierer2010forensic]. 
 
-These are the methods you used. Should probably be at least a half of a page.
-At a very minimum should include citations for DADA2 [@callahan2016] and
-phyloseq [@mcmurdie2013]. Note that these don't count towards the five
-references you need to cite in the introduction.
+## Computational 
+
+To analyze this data,  several libraries "dplyr", tidyr, "knitr", “ggplot2”, “Citr”, “seqinr”,”mctoolsr ”were downloaded into R in addition to  DADA2 and phyloseq.  The main job of clearning the dataset and getting rid of duplicate sequences is done through Dada2 package while Phyloseq, installed from Bioconductor,  is used to visualize our result. Other libraries such as tidyr and ggplot are used to create graphs where as Citr is used to create references. Seqinr is used to export a fasta of our final denoised sequence variant. 
+ 
+The dada2 package infers exact amplicon sequence variants (ASVs) from high-throughput amplicon sequencing data. . The dada2 pipeline takes as input demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available via a native implementation of the RDP naive Bayesian classifier, and species-level assignment to 16S rRNA gene fragments by exact matching [@callahan2016], [@mcmurdie2013].   
+  
+Some of the steps used to process the data is as follows: Initally, the files were sorted and the .Fasta ending was then eliminated.   Quality plots for all samples were then constructed.  Qualtiy profiles demonstrated that most reads tend to be lower in quality after around 200 basepairs.  DADA2 was then used to trim  data for maximum length of 300. Also, duplicates sequences were removed through dereplication-combining all identical sequencing reads into into “unique sequences”.  Several graphs were then created to show error rates  for each possible transition (A→C, A→G, …). Points are the observed error rates for each consensus quality score. The black line shows the estimated error rates after convergence of the machine-learning algorithm. The red line shows the error rates expected under the nominal definition of the Q-score. Here the estimated error rates (black line) are a good fit to the observed rates (points), and the error rates drop with increased quality as expected. Everything looks reasonable and we proceed with confidence[@edgar2015error].  
+
+
 
 # Results
+I was curious to find out how many unique age groups are present in our data set and what gender those induvial are.  Therefore, I created Table 1. According to this table, there are 3 unique age groups in the dataset: Ages 25, 33, 36.  
 
-In addition to a minimum of 3-4 figures/tables (and associated captions), 
-you should include sufficient text in this section to describe what your
-findings were. Remember that in the results section you just describe what you
-found, but you don't interpret it - that happens in the discussion.
+To examine further the differences in terms of sequence abundance in these 3 age groups,  Figure 1 was constructed.   This figure shows that the abundance of sequences in 25  year olds is about 18,000 whereas the number is approximately 15,000 in 33 year olds and apporximately 10,000 in 25 year old age group. I also wanted to find out the abundance of different classes and phyla  in all groups combined.  Figure 2 demonstrates that in all groups combined Actinobacteria is the most abundant group with abundance of over 60,000 sequences. 
 
+
+Since bacterial abundance is highest in age group 25,  I was curious to find out how much diversity is seen in this group.  I constructed  Figure 3 to find out the diversity in age group 25.  In age group 25 years old  Acientobactor is the largest class followed by Bacilli.  
+
+In age group 33 and 36 , abundance of sequences is  shown in  Figure 4 and Frigure 5 respectively.   Majority of Sequences found in age group 33 years old  are Actinobacteria following Baccilli, Chlororplast, Garmmaproteobactera. In age 36, Actinobacteri, Baccili and Clostriia are the top three highest counts in that order. 
 ```{r load-libraries, message = FALSE}
 # Be sure to install these packages before running this script
 # They can be installed either with the intall.packages() function
@@ -343,8 +363,13 @@ sequences found in age group 36 years old with  the majority being
 Actinobacteria, bacilli and clostridia.
 # Discussion
 
-Add around 2-3 pages interpreting your results and considering future directions
-one might take in analyzing these data.
+The results mentioned above show that there are differences in diversity and abundance of microorganisms in each age group.  Figure 1 demonstrates that age 25 years old has the most abundance.  Although age group 25 shows the most abundance, it shows least diversity with only 2 peaks for  Acinetobacter and Bacilli.  On the other hand, Age 36 has the most diversity with least abundance on total sequences.  Figure 5 shows 8 bars each indicating presence of a different unique sequence.  The two most abundant sequences across all groups were Acinetobacter and Bacilli.
+
+Although differences are seen in the skin microbiome in the 3 age groups in my analysis of Fierer et al data, considering that there were only 3 individuals in this study, the sample size is too small come up with statistically significant conclusions.  The difference seen in the diversity of the skin bacteria in these 3 individuals could be due to factors outside of age such as race, weight, diet, exercise schedules.  A larger sample size controlled for confounding factors is required for a good analysis. A future study could be designed with 30 people recruited in each unique age group. In addition, all members in each group need to be following a prescribed diet, be of the same gender and race, have been screened to be taking no medications and have similar Body Mass Index.  In addition, they to be using same soaps and shampoos and other skin products 30 days prior to start of the study.  As I was searching literature, I found a study that has a better design for the purpose of the central question that I am trying to answer.[@ying2015influence].  In this study done by Ying et al, a much larger sample size of 71 was recruited.  In addtion, there were certain exclusion criteria 
+for who could be accepted into the study design in order to control for confounders. I would follow a similar design if I were to contstruct my own study.
+
+In conclusion, my analysis was sucessful in exploring how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging..My analyis shows that there are differences in compostion and abundance of sequnces in each unique age group.  However,  becasue of the small sample size,we are limited as far as drawing any causal relationship between the varaibles.  Further studeis with larger sample size are needed to lead the way to the creation of novel therapeutics that could slow down aging
+
 
 # Sources Cited
 
