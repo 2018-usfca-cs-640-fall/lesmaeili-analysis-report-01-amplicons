@@ -1,18 +1,18 @@
 Analysis Report 1: Analysis of Human Skin Micorbiome in Different Age Groups
 ================
 Leila Esmaeili
-November 11, 2018
+November 12, 2018
 
 Introduction
 ============
 
-The main purpose of this report is to explore how the data collected by Frier et al can be used to investigate the relation between the skin microbiome and aging. It is important to understand the relationship between aging and human skin microbiome because this understanding can lay the foundation for creation of novel therapeutics that could slow down aging.
+The main purpose of this report is to explore how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging. It is important to understand the relationship between aging and human skin microbiome because this understanding can lay the foundation for creation of novel therapeutics that could slow down aging. This represents a paradigm shift for medicine in which our relationship with microbes is viewed as a symbiosis instead of a potential source for clinical infectious disease.(Sleator, 2010)
 
-Several studies have been done in C. elegans., a model organism, to find out relationships between the microbiome and aging. For instance, it has been shown that E. coli that co-exist with the worms secrete diffusible molecules, including metabolites and small RNAs that can impact C. elegans aging. (Heintz and Mair, 2014) Another study has revealed how drug action on host-microbiome interactions can impact longevity in C. elegans Metformin ( a drug widely prescribed to treat Diabetes) extends lifespan in C. elegans by inhibiting l folate and methionine metabolism in E. coli. This, in turn, leads to altered methionine metabolism in the worm, and increased lifespan(Cabreiro *et al.*, 2013).
+Several studies have been done in C. elegans., a model organism, to find out relationships between the microbiome and aging. For instance, it has been shown that E. coli that co-exist with the worms secrete diffusible molecules, including metabolites and small RNAs that can impact C. elegans aging. (Heintz and Mair, 2014) Another study has revealed how drug action on host-microbiome interactions can impact longevity in C. elegans Metformin ( a drug widely prescribed to treat Diabetes) extends lifespan in C. elegans by inhibiting l-folate and methionine metabolism in E. coli. This, in turn, leads to altered methionine metabolism in the worm, and increased lifespan(Cabreiro *et al.*, 2013).
 
-In addition, several studies done in humans reveal interesting information about how different age groups host different kind of Microbiome. For example, it has been shown in that human skin microbiome shifts significantly in puberty specially(Oh *et al.*, 2012). Another study demonstrates changes in microbiome diversity related to age(Ying *et al.*, 2015). In addition, a study has shown a certain bacterium added to the skin can help keep the skin younger (Dimarzio *et al.*, 2008))
+In addition, several studies done in humans reveal interesting information about how different age groups host different kind of Microbiome. For example, it has been shown that human skin microbiome shifts significantly in puberty specially(Oh *et al.*, 2012). Another study demonstrates changes in microbiome diversity related to age(Ying *et al.*, 2015). In addition, a study has shown a certain bacterium added to the skin can help keep the skin younger (Dimarzio *et al.*, 2008)).
 
-It is worthwhile to note here the recent advances in mirobiome research has been in part made possible through novel DNA sequencing methodology. Using these methods, scientists are are able to characterize and analyze microbiomes with greater accuracy compared to culture-based approaches. A common approach used to identify bacterial populations is based on sequencing of the small subunit bacterial 16S ribosomal RNA (rRNA) gene. 16S ribosomal RNA (rRNA) gene is present in all bacteria and archaea but not in eukaryotes. The 16S rRNA gene has variable regions, used for taxonomic classification, and conserved regions, as binding sites for PCR primers. Importantly, an organism does not need to be cultured to determine its type by 16S rRNA sequencing. Hypervariable regions within this gene contain species-specific sequences, that when compared to reference databases, allow identification of the bacteria of origin.(Lane *et al.*, 1985),(Dethlefsen *et al.*, 2008).
+It is worthwhile to note here the recent advances in mirobiome research has been in part made possible through novel DNA sequencing methodology. Considering that it there are about 100 trillion bacteria associated with humans that outnumber our human cells by a factor of ten(Huttenhower *et al.*, 2012),(Grice and Segre, 2011), it is important to apply these novel methods to identify bacterial sequences with accuracy and precision. A common approach used to identify bacterial populations is based on sequencing of the small subunit bacterial 16S ribosomal RNA (rRNA) gene. 16S ribosomal RNA (rRNA) gene is present in all bacteria and archaea but not in eukaryotes. The 16S rRNA gene has variable regions, used for taxonomic classification, and conserved regions, as binding sites for PCR primers. Importantly, an organism does not need to be cultured to determine its type by 16S rRNA sequencing. Hypervariable regions within this gene contain species-specific sequences, that when compared to reference databases, allow identification of the bacteria of origin.(Lane *et al.*, 1985),(Dethlefsen *et al.*, 2008).
 
 Methods
 =======
@@ -20,9 +20,9 @@ Methods
 Sample origin and sequencing
 ----------------------------
 
-Frier et al have used the following method to collect their data. First, they swabbed individual keys of three personal computer keyboards and the skin on the front surface of the distal joint of each fingertip of the owner of each keyboard. They also swabbed space bar keys from 15 other private and public computer keyboards located on the University of Colorado campus. The keyboards were swabbed 1–2 h after having last been touched. Skin surfaces and keyboard keys were sampled using autoclaved cotton-tipped swabs premoistened with a sterile solution All swabs were stored at −80 °C for less than 1 week before DNA extraction.
+Fierer et al have used the following method to collect their data. First, they swabbed individual keys of three personal computer keyboards and the skin on the front surface of the distal joint of each fingertip of the owner of each keyboard. They also swabbed space bar keys from 15 other private and public computer keyboards located on the University of Colorado campus. The keyboards were swabbed 1–2 h after having last been touched. Skin surfaces and keyboard keys were sampled using autoclaved cotton-tipped swabs premoistened with a sterile solution All swabs were stored at −80 °C for less than 1 week before DNA extraction.
 
-Second, Genomic DNA was extracted from the swabs using the MO BIO Power Soil DNA Isolation kit. The cotton tips of frozen swabs were broken off directly into bead tubes to which 60 μL of Solution C1 had been added. Tubes were incubated at 65 °C for 10 min and then shaken horizontally at maximum speed for 2 min using the MO BIO vortex adapter. The remaining steps were performed as directed by the manufacturer. Bacterial DNA was extracted from the swabs, and bacterial community composition was determined using the barcoded pyrosequencing procedure.
+Second, Genomic DNA was extracted from the swabs using the MO BIO Power Soil DNA Isolation kit. The cotton tips of frozen swabs were broken off directly into bead tubes. Tubes were incubated at 65 °C for 10 min and then shaken horizontally at maximum speed for 2 min using the MO BIO vortex adapter. The remaining steps were performed as directed by the manufacturer. Bacterial DNA was extracted from the swabs, and bacterial community composition was determined using the barcoded pyrosequencing procedure.
 
 Third, For each sample, 16S rRNA genes were amplified using the primer set that had been optimized for the phylogenetic analysis of pyrosequencing reads . PCR reactions were carried out in triplicate 25-μL reactions with 0.6 μM forward and reverse primers, 3 μL template DNA, and 1× of HotMasterMix (5 PRIME). TReplicate amplicons were pooled and visualized on 0.1% agarose gels using SYBR Safe DNA gel stain in 0.5× TBE (Invitrogen). Amplicons were cleaned using the UltraClean-htp 96-well PCR Clean-up kit (MO BIO). Amplicon DNA concentrations were measured using the Quant-iT PicoGreen dsDNA reagent and kit (Invitrogen). Following quantitation, cleaned amplicons were combined in equimolar ratios into a single tube.
 
@@ -33,7 +33,7 @@ Computational
 
 To analyze this data, several libraries "dplyr", tidyr, "knitr", “ggplot2”, “Citr”, “seqinr”,”mctoolsr ”were downloaded into R in addition to DADA2 and phyloseq. The main job of clearning the dataset and getting rid of duplicate sequences is done through Dada2 package while Phyloseq, installed from Bioconductor, is used to visualize our result. Other libraries such as tidyr and ggplot are used to create graphs where as Citr is used to create references. Seqinr is used to export a fasta of our final denoised sequence variant.
 
-The dada2 package infers exact amplicon sequence variants (ASVs) from high-throughput amplicon sequencing data. . The dada2 pipeline takes as input demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available via a native implementation of the RDP naive Bayesian classifier, and species-level assignment to 16S rRNA gene fragments by exact matching (Callahan *et al.*, 2016), (McMurdie and Holmes, 2013).
+The dada2 package infers exact amplicon sequence variants (ASVs) from high-throughput amplicon sequencing data. . The dada2 pipeline takes as input demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available using the RDP naive Bayesian classifier, and species-level assignment to 16S rRNA gene fragments by exact matching (Callahan *et al.*, 2016), (McMurdie and Holmes, 2013).
 
 Some of the steps used to process the data is as follows: Initally, the files were sorted and the .Fasta ending was then eliminated. Quality plots for all samples were then constructed. Qualtiy profiles demonstrated that most reads tend to be lower in quality after around 200 basepairs. DADA2 was then used to trim data for maximum length of 300. Also, duplicates sequences were removed through dereplication-combining all identical sequencing reads into into “unique sequences”. Several graphs were then created to show error rates for each possible transition (A→C, A→G, …). Points are the observed error rates for each consensus quality score. The black line shows the estimated error rates after convergence of the machine-learning algorithm. The red line shows the error rates expected under the nominal definition of the Q-score. Here the estimated error rates (black line) are a good fit to the observed rates (points), and the error rates drop with increased quality as expected. Everything looks reasonable and we proceed with confidence(Edgar and Flyvbjerg, 2015).
 
@@ -2785,7 +2785,7 @@ unname(taxa)
     ##  [781,] "Bacteria" "Bacteroidetes"               "Flavobacteriia"       
     ##  [782,] "Bacteria" "Firmicutes"                  "Clostridia"           
     ##  [783,] "Bacteria" "Actinobacteria"              "Actinobacteria"       
-    ##  [784,] "Bacteria" "Proteobacteria"              NA                     
+    ##  [784,] "Bacteria" NA                            NA                     
     ##  [785,] "Bacteria" "Proteobacteria"              "Alphaproteobacteria"  
     ##  [786,] "Bacteria" "Firmicutes"                  "Bacilli"              
     ##  [787,] "Bacteria" "Proteobacteria"              "Gammaproteobacteria"  
@@ -3233,7 +3233,7 @@ unname(taxa)
     ## [1229,] "Bacteria" "Firmicutes"                  "Clostridia"           
     ## [1230,] "Bacteria" "Firmicutes"                  "Bacilli"              
     ## [1231,] "Bacteria" "Firmicutes"                  "Clostridia"           
-    ## [1232,] "Bacteria" "Bacteroidetes"               "Bacteroidia"          
+    ## [1232,] "Bacteria" "Bacteroidetes"               NA                     
     ## [1233,] "Bacteria" "Proteobacteria"              "Gammaproteobacteria"  
     ## [1234,] "Bacteria" "Firmicutes"                  "Bacilli"              
     ## [1235,] "Bacteria" "Bacteroidetes"               "Flavobacteriia"       
@@ -3331,7 +3331,7 @@ unname(taxa)
     ## [1327,] "Bacteria" "Actinobacteria"              "Actinobacteria"       
     ## [1328,] "Bacteria" "Firmicutes"                  "Clostridia"           
     ## [1329,] "Bacteria" "Firmicutes"                  "Bacilli"              
-    ## [1330,] "Bacteria" "Bacteroidetes"               NA                     
+    ## [1330,] "Bacteria" "Bacteroidetes"               "Bacteroidia"          
     ## [1331,] "Bacteria" "Bacteroidetes"               "Bacteroidia"          
     ## [1332,] "Bacteria" "Proteobacteria"              "Alphaproteobacteria"  
     ## [1333,] "Bacteria" "Firmicutes"                  "Clostridia"           
@@ -3609,7 +3609,7 @@ unname(taxa)
     ##   [71,] "Actinomycetales"     "Propionibacteriaceae"             
     ##   [72,] "Bacillales"          "Staphylococcaceae"                
     ##   [73,] "Actinomycetales"     "Actinomycetaceae"                 
-    ##   [74,] "Bacillales"          NA                                 
+    ##   [74,] "Bacillales"          "Alicyclobacillaceae"              
     ##   [75,] "Selenomonadales"     "Veillonellaceae"                  
     ##   [76,] "Bacteroidales"       "Bacteroidaceae"                   
     ##   [77,] "Clostridiales"       "Peptoniphilaceae"                 
@@ -3624,7 +3624,7 @@ unname(taxa)
     ##   [86,] "Actinomycetales"     "Micrococcaceae"                   
     ##   [87,] "Clostridiales"       "Peptostreptococcaceae"            
     ##   [88,] "Actinomycetales"     "Corynebacteriaceae"               
-    ##   [89,] "Bacillales"          "Alicyclobacillaceae"              
+    ##   [89,] "Bacillales"          NA                                 
     ##   [90,] "Lactobacillales"     "Carnobacteriaceae"                
     ##   [91,] "Lactobacillales"     "Streptococcaceae"                 
     ##   [92,] "Pseudomonadales"     "Pseudomonadaceae"                 
@@ -4449,7 +4449,7 @@ unname(taxa)
     ##  [911,] "Clostridiales"       "Lachnospiraceae"                  
     ##  [912,] "Hydrogenophilales"   "Hydrogenophilaceae"               
     ##  [913,] "Clostridiales"       "Clostridiaceae_1"                 
-    ##  [914,] "Clostridiales"       "Peptoniphilaceae"                 
+    ##  [914,] "Clostridiales"       NA                                 
     ##  [915,] "Clostridiales"       "Lachnospiraceae"                  
     ##  [916,] "Clostridiales"       "Lachnospiraceae"                  
     ##  [917,] "Bacillales"          "Bacillales_Incertae_Sedis_XI"     
@@ -4767,7 +4767,7 @@ unname(taxa)
     ## [1229,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XI"  
     ## [1230,] "Lactobacillales"     "Aerococcaceae"                    
     ## [1231,] "Clostridiales"       "Peptostreptococcaceae"            
-    ## [1232,] "Bacteroidales"       NA                                 
+    ## [1232,] NA                    NA                                 
     ## [1233,] "Enterobacteriales"   "Enterobacteriaceae"               
     ## [1234,] "Lactobacillales"     "Carnobacteriaceae"                
     ## [1235,] "Flavobacteriales"    "Flavobacteriaceae"                
@@ -4865,7 +4865,7 @@ unname(taxa)
     ## [1327,] "Bifidobacteriales"   "Bifidobacteriaceae"               
     ## [1328,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XI"  
     ## [1329,] "Lactobacillales"     "Streptococcaceae"                 
-    ## [1330,] NA                    NA                                 
+    ## [1330,] "Bacteroidales"       NA                                 
     ## [1331,] "Bacteroidales"       "Porphyromonadaceae"               
     ## [1332,] "Rhizobiales"         "Bartonellaceae"                   
     ## [1333,] "Clostridiales"       "Ruminococcaceae"                  
@@ -4925,7 +4925,7 @@ unname(taxa)
     ## [1387,] "Acidimicrobiales"    "Iamiaceae"                        
     ## [1388,] "Bacteroidales"       "Prevotellaceae"                   
     ## [1389,] "Rhizobiales"         "Brucellaceae"                     
-    ## [1390,] "Clostridiales"       NA                                 
+    ## [1390,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XIII"
     ## [1391,] "Fusobacteriales"     "Leptotrichiaceae"                 
     ## [1392,] "Flavobacteriales"    "Flavobacteriaceae"                
     ## [1393,] "Bacteroidales"       "Porphyromonadaceae"               
@@ -4948,7 +4948,7 @@ unname(taxa)
     ## [1410,] "Fusobacteriales"     "Leptotrichiaceae"                 
     ## [1411,] "Rhizobiales"         "Methylobacteriaceae"              
     ## [1412,] "Lactobacillales"     "Lactobacillaceae"                 
-    ## [1413,] "Actinomycetales"     "Nakamurellaceae"                  
+    ## [1413,] "Actinomycetales"     NA                                 
     ## [1414,] "Bacteroidales"       "Prevotellaceae"                   
     ## [1415,] "Cytophagales"        "Cytophagaceae"                    
     ## [1416,] "Clostridiales"       "Peptoniphilaceae"                 
@@ -4964,9 +4964,9 @@ unname(taxa)
     ## [1426,] "Lactobacillales"     "Carnobacteriaceae"                
     ## [1427,] NA                    NA                                 
     ## [1428,] NA                    NA                                 
-    ## [1429,] "Clostridiales"       "Catabacteriaceae"                 
+    ## [1429,] "Clostridiales"       NA                                 
     ## [1430,] "Actinomycetales"     NA                                 
-    ## [1431,] "Burkholderiales"     NA                                 
+    ## [1431,] NA                    NA                                 
     ## [1432,] "Fusobacteriales"     "Fusobacteriaceae"                 
     ## [1433,] "Sphingobacteriales"  "Chitinophagaceae"                 
     ## [1434,] "Sphingobacteriales"  "Sphingobacteriaceae"              
@@ -4990,10 +4990,10 @@ unname(taxa)
     ## [1452,] "Aeromonadales"       "Aeromonadaceae"                   
     ## [1453,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XI"  
     ## [1454,] "Thermales"           "Thermaceae"                       
-    ## [1455,] "Acidimicrobiales"    NA                                 
+    ## [1455,] NA                    NA                                 
     ## [1456,] "Sphingobacteriales"  "Sphingobacteriaceae"              
     ## [1457,] "Lactobacillales"     "Aerococcaceae"                    
-    ## [1458,] "Clostridiales"       NA                                 
+    ## [1458,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XI"  
     ## [1459,] "Actinomycetales"     "Nocardioidaceae"                  
     ## [1460,] "Clostridiales"       "Clostridiales_Incertae_Sedis_XI"  
     ## [1461,] "Bacteroidales"       "Prevotellaceae"                   
@@ -5030,7 +5030,7 @@ unname(taxa)
     ## [1492,] "Selenomonadales"     "Veillonellaceae"                  
     ## [1493,] "Actinomycetales"     "Actinomycetaceae"                 
     ## [1494,] "Bacteroidales"       "Prevotellaceae"                   
-    ## [1495,] "Burkholderiales"     NA                                 
+    ## [1495,] NA                    NA                                 
     ## [1496,] NA                    NA                                 
     ## [1497,] "Pseudomonadales"     "Moraxellaceae"                    
     ## [1498,] "Burkholderiales"     "Comamonadaceae"                   
@@ -5310,7 +5310,7 @@ unname(taxa)
     ##  [238,] "Finegoldia"                     
     ##  [239,] "Prevotella"                     
     ##  [240,] "Capnocytophaga"                 
-    ##  [241,] "Haemophilus"                    
+    ##  [241,] NA                               
     ##  [242,] "Leuconostoc"                    
     ##  [243,] NA                               
     ##  [244,] "Bacteroides"                    
@@ -5447,7 +5447,7 @@ unname(taxa)
     ##  [375,] "Moraxella"                      
     ##  [376,] "Micrococcus"                    
     ##  [377,] "Arthrobacter"                   
-    ##  [378,] "Alloprevotella"                 
+    ##  [378,] NA                               
     ##  [379,] "Kingella"                       
     ##  [380,] NA                               
     ##  [381,] "Clostridium_sensu_stricto"      
@@ -5644,7 +5644,7 @@ unname(taxa)
     ##  [572,] "Streptococcus"                  
     ##  [573,] "Gemella"                        
     ##  [574,] NA                               
-    ##  [575,] "Dorea"                          
+    ##  [575,] NA                               
     ##  [576,] "Fusobacterium"                  
     ##  [577,] "Gemella"                        
     ##  [578,] "Intestinibacter"                
@@ -5761,7 +5761,7 @@ unname(taxa)
     ##  [689,] "Corynebacterium"                
     ##  [690,] "Massilia"                       
     ##  [691,] "Paenibacillus"                  
-    ##  [692,] NA                               
+    ##  [692,] "Anaerostipes"                   
     ##  [693,] "Peptoniphilus"                  
     ##  [694,] "Veillonella"                    
     ##  [695,] "Turicibacter"                   
@@ -5856,12 +5856,12 @@ unname(taxa)
     ##  [784,] NA                               
     ##  [785,] "Sphingomonas"                   
     ##  [786,] "Gemella"                        
-    ##  [787,] NA                               
+    ##  [787,] "Enterobacter"                   
     ##  [788,] "Peptoniphilus"                  
     ##  [789,] "Enhydrobacter"                  
     ##  [790,] "Haemophilus"                    
     ##  [791,] "Duganella"                      
-    ##  [792,] NA                               
+    ##  [792,] "Alloprevotella"                 
     ##  [793,] "Massilia"                       
     ##  [794,] "Corynebacterium"                
     ##  [795,] "Streptococcus"                  
@@ -5942,7 +5942,7 @@ unname(taxa)
     ##  [870,] NA                               
     ##  [871,] "Pseudomonas"                    
     ##  [872,] "Porphyromonas"                  
-    ##  [873,] NA                               
+    ##  [873,] "Haemophilus"                    
     ##  [874,] "Arthrobacter"                   
     ##  [875,] "Actinomyces"                    
     ##  [876,] "Corynebacterium"                
@@ -5977,7 +5977,7 @@ unname(taxa)
     ##  [905,] "Acidovorax"                     
     ##  [906,] "Prevotella"                     
     ##  [907,] "Neisseria"                      
-    ##  [908,] NA                               
+    ##  [908,] "Arcanobacterium"                
     ##  [909,] "Capnocytophaga"                 
     ##  [910,] NA                               
     ##  [911,] "Fusicatenibacter"               
@@ -6035,7 +6035,7 @@ unname(taxa)
     ##  [963,] "Paracoccus"                     
     ##  [964,] "Selenomonas"                    
     ##  [965,] "Peptoniphilus"                  
-    ##  [966,] "Novosphingobium"                
+    ##  [966,] NA                               
     ##  [967,] "Pedobacter"                     
     ##  [968,] "Peptoniphilus"                  
     ##  [969,] "Granulicatella"                 
@@ -6126,7 +6126,7 @@ unname(taxa)
     ## [1054,] "Bacteroides"                    
     ## [1055,] NA                               
     ## [1056,] "Propionibacterium"              
-    ## [1057,] "Anaerostipes"                   
+    ## [1057,] NA                               
     ## [1058,] "Leptotrichia"                   
     ## [1059,] NA                               
     ## [1060,] "Bacteroides"                    
@@ -6141,7 +6141,7 @@ unname(taxa)
     ## [1069,] "Fusobacterium"                  
     ## [1070,] "Marinomonas"                    
     ## [1071,] "Corynebacterium"                
-    ## [1072,] NA                               
+    ## [1072,] "Haemophilus"                    
     ## [1073,] "Alistipes"                      
     ## [1074,] "Psychrobacter"                  
     ## [1075,] "Fusobacterium"                  
@@ -6156,7 +6156,7 @@ unname(taxa)
     ## [1084,] NA                               
     ## [1085,] "Streptococcus"                  
     ## [1086,] "Sporosarcina"                   
-    ## [1087,] NA                               
+    ## [1087,] "Frigoribacterium"               
     ## [1088,] "Microvirga"                     
     ## [1089,] "Weissella"                      
     ## [1090,] "Actinomyces"                    
@@ -6169,7 +6169,7 @@ unname(taxa)
     ## [1097,] "Haemophilus"                    
     ## [1098,] "Phenylobacterium"               
     ## [1099,] "Rothia"                         
-    ## [1100,] "Luteimonas"                     
+    ## [1100,] NA                               
     ## [1101,] "Anaerococcus"                   
     ## [1102,] "Rathayibacter"                  
     ## [1103,] "Anaerococcus"                   
@@ -6190,7 +6190,7 @@ unname(taxa)
     ## [1118,] "Pantoea"                        
     ## [1119,] "Alloiococcus"                   
     ## [1120,] "Prevotella"                     
-    ## [1121,] NA                               
+    ## [1121,] "Enterobacter"                   
     ## [1122,] "Atopobium"                      
     ## [1123,] "Hymenobacter"                   
     ## [1124,] "Microbacterium"                 
@@ -6213,7 +6213,7 @@ unname(taxa)
     ## [1141,] NA                               
     ## [1142,] NA                               
     ## [1143,] NA                               
-    ## [1144,] "Oscillibacter"                  
+    ## [1144,] NA                               
     ## [1145,] NA                               
     ## [1146,] "Porphyromonas"                  
     ## [1147,] "Peptoniphilus"                  
@@ -6270,7 +6270,7 @@ unname(taxa)
     ## [1198,] NA                               
     ## [1199,] "Leptotrichia"                   
     ## [1200,] "Capnocytophaga"                 
-    ## [1201,] NA                               
+    ## [1201,] "Alistipes"                      
     ## [1202,] "Parabacteroides"                
     ## [1203,] "Ruminococcus"                   
     ## [1204,] "Selenomonas"                    
@@ -6283,7 +6283,7 @@ unname(taxa)
     ## [1211,] NA                               
     ## [1212,] "Capnocytophaga"                 
     ## [1213,] "Bacteroides"                    
-    ## [1214,] "Clostridium_XlVa"               
+    ## [1214,] NA                               
     ## [1215,] "Prevotella"                     
     ## [1216,] "Macrococcus"                    
     ## [1217,] "Sphingomonas"                   
@@ -6414,7 +6414,7 @@ unname(taxa)
     ## [1342,] NA                               
     ## [1343,] "Capnocytophaga"                 
     ## [1344,] "Terrisporobacter"               
-    ## [1345,] NA                               
+    ## [1345,] "Coprobacillus"                  
     ## [1346,] "Fusobacterium"                  
     ## [1347,] "Lactobacillus"                  
     ## [1348,] "Lactobacillus"                  
@@ -6482,7 +6482,7 @@ unname(taxa)
     ## [1410,] "Leptotrichia"                   
     ## [1411,] "Methylobacterium"               
     ## [1412,] "Lactobacillus"                  
-    ## [1413,] "Nakamurella"                    
+    ## [1413,] NA                               
     ## [1414,] "Prevotella"                     
     ## [1415,] "Flectobacillus"                 
     ## [1416,] "Peptoniphilus"                  
@@ -6498,7 +6498,7 @@ unname(taxa)
     ## [1426,] "Granulicatella"                 
     ## [1427,] NA                               
     ## [1428,] NA                               
-    ## [1429,] "Catabacter"                     
+    ## [1429,] NA                               
     ## [1430,] NA                               
     ## [1431,] NA                               
     ## [1432,] "Fusobacterium"                  
@@ -6563,7 +6563,7 @@ unname(taxa)
     ## [1491,] "Flavobacterium"                 
     ## [1492,] "Centipeda"                      
     ## [1493,] "Actinomyces"                    
-    ## [1494,] NA                               
+    ## [1494,] "Alloprevotella"                 
     ## [1495,] NA                               
     ## [1496,] NA                               
     ## [1497,] "Acinetobacter"                  
@@ -6729,9 +6729,11 @@ plot_bar(age_phyloseq_obj, x = "Class")
 
 The results mentioned above show that there are differences in diversity and abundance of microorganisms in each age group. Figure 1 demonstrates that age 25 years old has the most abundance. Although age group 25 shows the most abundance, it shows least diversity with only 2 peaks for Acinetobacter and Bacilli. On the other hand, Age 36 has the most diversity with least abundance on total sequences. Figure 5 shows 8 bars each indicating presence of a different unique sequence. The two most abundant sequences across all groups were Acinetobacter and Bacilli.
 
-Although differences are seen in the skin microbiome in the 3 age groups in my analysis of Fierer et al data, considering that there were only 3 individuals in this study, the sample size is too small come up with statistically significant conclusions. The difference seen in the diversity of the skin bacteria in these 3 individuals could be due to factors outside of age such as race, weight, diet, exercise schedules. A larger sample size controlled for confounding factors is required for a good analysis. A future study could be designed with 30 people recruited in each unique age group. In addition, all members in each group need to be following a prescribed diet, be of the same gender and race, have been screened to be taking no medications and have similar Body Mass Index. In addition, they to be using same soaps and shampoos and other skin products 30 days prior to start of the study. As I was searching literature, I found a study that has a better design for the purpose of the central question that I am trying to answer.(Ying *et al.*, 2015). In this study done by Ying et al, a much larger sample size of 71 was recruited. In addtion, there were certain exclusion criteria for who could be accepted into the study design in order to control for confounders. I would follow a similar design if I were to contstruct my own study.
+Although differences are seen in the skin microbiome in the 3 age groups in my analysis of Fierer et al data, considering that there were only 3 individuals in this study, the sample size is too small come up with statistically significant conclusions. The difference seen in the diversity of the skin bacteria in these 3 individuals could be due to factors outside of age such as race, weight, diet, exercise schedules. A larger sample size controlled for confounding factors is required for a good analysis. A future study could be designed with 30 people recruited in each unique age group. In addition, all members in each group need to be following a prescribed diet, be of the same gender and race, have been screened to be taking no medications and have similar Body Mass Index. In addition, they to be using same soaps and shampoos and other skin products 30 days prior to start of the study.
 
-In conclusion, my analysis was sucessful in exploring how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging..My analyis shows that there are differences in compostion and abundance of sequnces in each unique age group. However, becasue of the small sample size,we are limited as far as drawing any causal relationship between the varaibles. Further studeis with larger sample size are needed to lead the way to the creation of novel therapeutics that could slow down aging
+As I was searching literature, I found a study that has a better design for the purpose of the central question that I am trying to answer. In this study done by Ying et al(Ying *et al.*, 2015), a much larger sample size of 71 was recruited. In addtion, there were certain exclusion criteria for who could be accepted into the study design in order to control for confounders. I would follow a similar design if I were to contstruct my own study. I would then perform ANOVA or ANOSIM to find out if the differnces seen between groups is statistically significant.
+
+In conclusion, my analysis was sucessful in exploring how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging. My analysis shows that there are differences in compostion and abundance of sequnces in each unique age group. However, because of the small sample size, we are limited to draw conclusions. Further studeis with larger sample size are needed to lead the way to the creation of novel therapeutics that could slow down aging.
 
 Sources Cited
 =============
@@ -6748,12 +6750,18 @@ Edgar,R.C. and Flyvbjerg,H. (2015) Error filtering, pair assembly and error corr
 
 Fierer,N. *et al.* (2010) Forensic identification using skin bacterial communities. *Proceedings of the National Academy of Sciences*, **107**, 6477–6481.
 
+Grice,E.A. and Segre,J.A. (2011) The skin microbiome. *Nature Reviews Microbiology*, **9**, 244.
+
 Heintz,C. and Mair,W. (2014) You are what you host: Microbiome modulation of the aging process. *Cell*, **156**, 408–411.
+
+Huttenhower,C. *et al.* (2012) Structure, function and diversity of the healthy human microbiome. *Nature*, **486**, 207.
 
 Lane,D.J. *et al.* (1985) Rapid determination of 16S ribosomal rna sequences for phylogenetic analyses. *Proceedings of the National Academy of Sciences*, **82**, 6955–6959.
 
 McMurdie,P.J. and Holmes,S. (2013) Phyloseq: An r package for reproducible interactive analysis and graphics of microbiome census data. *PLoS ONE*, **8**, e61217.
 
 Oh,J. *et al.* (2012) Shifts in human skin and nares microbiota of healthy children and adults. *Genome medicine*, **4**, 77.
+
+Sleator,R.D. (2010) The human superorganism–of microbes and men.
 
 Ying,S. *et al.* (2015) The influence of age and gender on skin-associated microbial communities in urban and rural human populations. *PloS one*, **10**, e0141842.
