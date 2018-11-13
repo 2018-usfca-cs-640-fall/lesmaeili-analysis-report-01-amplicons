@@ -36,7 +36,7 @@ Lastly, The DNA was separated on ice for 45 min after the addition of 5 M NaCl (
 
 To analyze this data,  several libraries "dplyr", tidyr, "knitr", “ggplot2”, “Citr”, “seqinr”,”mctoolsr” were downloaded into R in addition to DADA2 and phyloseq.  The main job of clearning the dataset and  eliminating duplicate sequences is done through Dada2 package while Phyloseq, installed from Bioconductor, is used to visualize our result. Other libraries such as tidyr and ggplot are used to create graphs where as Citr is used to create references. Seqinr is used to export a fasta of our final denoised sequence variant. 
  
-The dada2 package infers exact amplicon sequence variants (ASVs) from high-throughput amplicon sequencing data. . The dada2 pipeline takes as input demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available using  the RDP naive Bayesian classifier, and species-level assignment to 16S rRNA gene fragments by exact matching [@callahan2016], [@mcmurdie2013].   
+The dada2 package infers exact amplicon sequence variants (ASVs) from high-throughput amplicon sequencing data. The dada2 pipeline takes as input demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available using  the RDP naive Bayesian classifier, and species-level assignment to 16S rRNA gene fragments by exact matching [@callahan2016], [@mcmurdie2013].   
   
 Some of the steps used to process the data is as follows: Initally, the files were sorted and the .Fasta ending was then eliminated.   Quality plots for all samples were then constructed. Qualtiy profiles demonstrated that most reads tend to be lower in quality after around 200 basepairs.  DADA2 was  used to trim data for maximum length of 300. Also, duplicates sequences were removed through dereplication- combining all identical sequencing reads into into “unique sequences”.  Several graphs were then created to show error rates  for each possible transition (A→C, A→G, …). On these graphs, Points are the observed error rates for each consensus quality score. The black line shows the estimated error rates after convergence of the machine-learning algorithm. The red line shows the error rates expected under the nominal definition of the Q-score. Here the estimated error rates (black line) are a good fit to the observed rates (points), and the error rates drop with increased quality as expected. The data looks reasonable and clean and we can proceed with confidence[@edgar2015error].  
 
@@ -49,7 +49,7 @@ I was curious to find out how many unique age groups are present in our data set
 To examine further the differences in terms of sequence abundance in these 3 age groups,  Figure 1 was constructed.   This figure shows that the abundance of sequences in 25  year olds is about 18,000 whereas the number is approximately 15,000 in 33 year olds and apporximately 10,000 in 25 year old age group. I also wanted to find out the abundance of different classes and phyla  in all groups combined.  Figure 2 demonstrates that in all groups combined Actinobacteria is the most abundant group with abundance of over 60,000 sequences. 
 
 
-Since bacterial abundance is highest in age group 25,  I was curious to find out how much diversity is seen in this group.  I constructed  Figure 3 to find out the diversity in age group 25.  In age group 25 years old  Acientobactor is the largest class followed by Bacilli.  
+Since bacterial abundance is highest in age group 25, I was curious to find out how much diversity is seen in this group.  I constructed  Figure 3 to find out the diversity in age group 25.  In age group 25 years old  Acientobactor is the largest class followed by Bacilli.  
 
 In age group 33 and 36 , abundance of sequences is  shown in Figure 4 and Figure 5 respectively.   Majority of Sequences found in age group 33 years old are Actinobacteria following Baccilli, Chlororplast, Garmmaproteobactera. In age 36, Actinobacteri, Baccili and Clostriia are the top three highest counts in that order. 
 ```{r load-libraries, message = FALSE}
@@ -298,7 +298,7 @@ phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
 
 ```{r table-age-sex}
 # make a table to count the number of samples in the intersection of
-# two categorical columns
+# two categorical columns sex and gender to find out unique age-gender groups
 table(metadata_in$age,
       metadata_in$Sex)
 ```
@@ -308,7 +308,8 @@ uniqe age groups and and sex.  The table indicates that there are 3 sepecific
 age groups 25, 33, and 36 year old with the gender being male.
 
 ```{r abundance-across-age-groups}
-# bar plot of age group and Abundance of sequences
+# bar plot of age group and Abundance of sequences to visualize
+# total abundance in each of the 3 unique age groups
 plot_bar(phyloseq_obj, x = "age")
 ```
 
@@ -317,30 +318,29 @@ age groups. The largest number of  sequences was seen in age group 25 years old.
 
 ```{r histogram-shows-diversity-all-age-groups-combined}
 # subset out only the fingertip samples
-age_phyloseq_obj <- subset_samples(phyloseq_obj)
-                           
-# bar plot of finger samples and Abundance of sequences in different
-# Classes, colored by Order
+age_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source == "finger_tip" )
+# bar plot of finger samples and abundance of sequences in all age groups
+# categorized in different classes, colored by order
 plot_bar(age_phyloseq_obj,
          x = "Class",
          fill = "Order")
 ```
 
-** Figure 2** Diversity of phyla on fingertips colored by class.  
-This histogram shows that actinobacteria is the largest class and phylum present
+** Figure 2** Diversity of classes on fingertips colored by order.  
+This histogram shows that Actinobacteria is the largest class present
 on fingertips.
 
 ```{r histogram-diversity-age-25}
-# Abundance of  sequenecs in age group 25
+# Abundance of  sequenecs in age group 25 to visualize diversity across classes
 age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "25")
 plot_bar(age_phyloseq_obj, x = "Class")
 ```
 
-** Figure 3** This graph is a histogram that descibes diversity of phyla in age 
-group 25 years old. Acientobactor is the largest class followed by bacilli.
+** Figure 3** This graph is a histogram that describes diversity of classes in age 
+group 25 years old. Acientobactor is the largest class followed by Bacilli.
 
-```{r histogram-diversity-age33}
-# Histogram abundace age 33
+```{r histogram-diversity-age-33}
+# Histogram abundace age 33 to visiualize diversity across classes
 age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "33")
 plot_bar(age_phyloseq_obj, x = "Class")
 ```
@@ -352,15 +352,15 @@ following baccilli, Chlororplast, Garmmaproteobactera.
 
 
 ```{r histogram-diversity-age-36}
-# Histogram abundance age 36
+# Histogram abundance age 36 to visualize diversity across classes
 age_phyloseq_obj <- subset_samples(phyloseq_obj, age == "36")
 plot_bar(age_phyloseq_obj, x = "Class")
 ```
 
 
 ** Figure 5** This graph is a histogram that describes the abundance of 
-sequences found in age group 36 years old with  the majority being 
-Actinobacteria, bacilli and clostridia.
+sequences found in age group 36 years old with the majority being 
+Actinobacteria, Bacilli and clostridia.
 # Discussion
 
 The results mentioned above show that there are differences in diversity and abundance of microorganisms in each age group.  Figure 1 demonstrates that age 25 years old has the most abundance.  Although age group 25 shows the most abundance, it shows least diversity with only 2 peaks for  Acinetobacter and Bacilli.  On the other hand, Age 36 has the most diversity with least abundance on total sequences.  Figure 5 shows 8 bars each indicating presence of a different unique sequence.  The two most abundant sequences across all groups were Acinetobacter and Bacilli.
@@ -369,7 +369,7 @@ Although differences are seen in the skin microbiome in the 3 age groups in my a
 
 As I was searching literature, I found a study that has a better design for the purpose of the central question that I am trying to answer.  In this study done by Ying et al[@ying2015influence], a much larger sample size of 71 was recruited.  In addtion, there were certain exclusion criteria for who could be accepted into the study design in order to control for confounders. I would follow a similar design if I were to contstruct my own study. I would then perform ANOVA or ANOSIM to find out if the differnces seen between groups is statistically significant. 
 
-In conclusion, my analysis was sucessful in exploring how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging. My analysis shows that there are differences in compostion and abundance of sequnces in each unique age group.  However, because of the small sample size, we are limited to draw conclusions.  Further studeis with larger sample size are needed to lead the way to the creation of novel therapeutics that could slow down aging.
+In conclusion, my analysis was sucessful in exploring how the data collected by Fierer et al can be used to investigate the relation between the skin microbiome and aging. My analysis shows that there are differences in compostion and abundance of sequnces in each unique age group.  However, because of the small sample size, we are limited to draw meaningful conclusions.  Further studeis with larger sample size are needed to lead the way to the creation of novel biologic therapeutics that could slow down aging.
 
 
 # Sources Cited
