@@ -318,7 +318,7 @@ age groups. The largest number of  sequences was seen in age group 25 years old.
 
 ```{r histogram-shows-diversity-all-age-groups-combined}
 # subset out only the fingertip samples
-age_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source == "finger_tip" )
+age_phyloseq_obj <- subset_samples(phyloseq_obj, sample_source == "finger_tip")
 # bar plot of finger samples and abundance of sequences in all age groups
 # categorized in different classes, colored by order
 plot_bar(age_phyloseq_obj,
