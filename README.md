@@ -49,9 +49,7 @@ devtools::install_github("jimhester/lintr")
 
 and then whenever you want to check your code you can run at the R console in RStudio:
 
-```r
-lintr::lint(filename = "Analysis_Report_01_amplicons.Rmd")
-```
+
 
 **Pro Tip** Save often, commit often, push often! If you have any questions or need clarification of what it is I'd like you to do, please ask me sooner rather than later so you stay on the right track for completing this assignment on time.
 
